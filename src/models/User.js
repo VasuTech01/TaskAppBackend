@@ -31,8 +31,7 @@ const userSchema = new mongoose.Schema({
                 throw new Error("invalid Age");
             }
         }
-    }
-    ,
+    },
     password: {
         type: String,
         required: true,
@@ -40,7 +39,7 @@ const userSchema = new mongoose.Schema({
         trim:true,
         validate(value) {
             if (value.toLowerCase().includes('password')) {
-                throw new Error('invalid password hai ye');
+                throw new Error('invalid password');
             }
         }
     },
